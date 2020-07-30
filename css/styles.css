@@ -66,4 +66,29 @@ section {
   -ms-grid-columns: 30% auto;
   grid-template-columns: 30% auto; }
 
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+input {
+  height: 15px;
+  border-radius: 8px;
+  text-align: right;
+  padding: 3px; }
+  input.button {
+    height: 32px; }
+
+select {
+  height: 30px;
+  border-radius: 8px;
+  padding: 3px; }
+
 /*# sourceMappingURL=styles.css.map */

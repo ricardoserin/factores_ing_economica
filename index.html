@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <title>Programa</title>
+  <script src="js/program.js"></script>
+
 </head>
 <body>
   <header class="header__container">
@@ -57,36 +59,45 @@
           <span class="information__dev-name">Zavaleta Cortez Jeyson</span>
         </div>
       </div>
+      <div class="information__devs-container">
+        <h2 class="information__devs-title">Docente:</h2>
+        <div class="information__dev">
+          <img class="information__dev-photo"  src="img/poemape.jpg" alt="">
+         <span class="information__dev-name">Ing. Gloria Poemape</span>
+        </div>
+
+      </div>
     </div>
-    <div class="form-container">
-      <form action="">
+    <div  class="form-container">
+      <form name="f1" action="">
         <div>
           <h3>Seleccione la fórmula</h3>
           <label for="tipo_flujo">
             Tipo de flujo
-            <select name="tipo_flujo" id="">
-              <option value="0">Sencillo</option>
-              <option value="1">Series de pagos iguales</option>
-              <option value="2">Series con gradientes</option>
+            <select name="tipo_flujo" id="tipo_flujo" onchange="cambia_notacionFactorial()">
+              <option value="0">Seleccione el tipo de flujo</option>
+              <option value="1">Sencillo</option>
+              <option value="2">Series de pagos iguales</option>
+              <option value="3">Series con gradientes</option>
             </select>
           </label>
           <label for="factor">
             Factor
-            <select name="factor" id="">
-
+            <select name="factor" id="factor">
             </select>
           </label>
           
         </div>
         <div>
           <h3>Ingrese los siguientes datos</h3>
-          <label for="tasa">Tasa de interés<input type="number">%</label>
-          <label for="periodos">Número de periodos<input type="number"></label>
+          <label for="tasa">Tasa de interés (en decimales)<input id="tasa" name="tasa" type="number"></label>
+          <label for="periodos">Número de periodos<input id="periodos" name="periodos" type="number"></label>
         </div>
-        <button>Calcular</button>
-          
+        <input class="button" type="button" value="Calcular" onclick="program(); return false;">
+        <p id="resultado"></p>
       </form>
     </div>
   </section>
+  <script src="js/dependent-select.js"></script>
 </body>
 </html>

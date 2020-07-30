@@ -66,3 +66,30 @@ section{
   display: grid;
   grid-template-columns: 30% auto;
 }
+
+select{
+
+}
+
+label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input{
+  height: 15px;
+  border-radius: 8px;
+  text-align: right;
+  padding: 3px;
+  &.button{
+    height: 32px;
+  }
+}
+
+select{
+  height: 30px;
+  border-radius: 8px;
+  padding: 3px;
+}
+
