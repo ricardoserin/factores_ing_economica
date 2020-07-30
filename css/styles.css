@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 75px auto;
+  grid-template-rows: 75px auto;
+  min-height: 100vh; }
+
+.header__container {
+  height: 75px;
+  width: 100%;
+  background: #DEE3E4; }
+
+.header__escuela {
+  font-size: 10px; }
+
+/*# sourceMappingURL=styles.css.map */

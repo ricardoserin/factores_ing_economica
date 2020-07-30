@@ -1,10 +1,18 @@
+body{
+  margin: 0;
+  display: grid;
+  grid-template-rows: 75px auto;
+  min-height: 100vh;
+}
+
 .header{
   &__container{
-    
-
+    height: 75px;
+    width:100%;
+    background: #DEE3E4;
   }
   &__escuela{
-
+    font-size:10px;
   }
   &__universidad{
 
