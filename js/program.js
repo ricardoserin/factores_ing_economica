@@ -1,9 +1,37 @@
 function program(){
   var factores={
+    FP: function cantidad_compuesta_FP (N,i){
+      var F=Math.pow(1+i,N);
+      return F;
+    },
+    PF: function valor_presente_PF (N,i){
+      var F=Math.pow(1+i,-N);
+      return F;
+    },
+    FA: function cantidad_compuesta_FA (N,i){
+      var F=((Math.pow(1+i,N)-1)/(i));
+      return F;
+    },
+    AF: function fondo_de_amortizacion_AF (N,i){
+      var F=((i)/(Math.pow(1+i,N)-1));
+      return F;
+    },
+    PA: function valor_presente_PA (N,i){
+      var F=(Math.pow(1+i,N)-1)/(i*Math.pow(1+i,N));
+      return F;
+    },
     AP: function recuperacion_capital_AP(N,i) {
       let F=(i*Math.pow(1+i,N))/(Math.pow(1+i,N)-1);
       return F;
-      }
+      },
+    PG: function valor_presente_PG (N,i){
+      var F=((Math.pow(1+i,N)-i*N-1)/(Math.pow(i,2)*Math.pow(1+i,N)));
+      return F;
+    },
+    AG: function conversion_pagos_AG (N,i){
+      var F=((Math.pow(1+i,N)-i*N-1)/(i*(Math.pow(1+i,N)-1)));
+      return F;
+    }
   }
   var factor = document.getElementById("factor").value;
   var N = parseFloat(document.getElementById('periodos').value);
@@ -22,11 +50,33 @@ function program(){
   }
   else{
     switch(factor){
+      case 'F/P':
+        var resultado=factores.FP(N,i);
+        break;
+      case 'P/F':
+        var resultado=factores.PF(N,i);
+        break;
+      case 'F/A':
+        var resultado=factores.FA(N,i);
+        break;
+      case 'A/F':
+        var resultado=factores.AF(N,i);
+        break;
+      case 'P/A':
+        var resultado=factores.PA(N,i);
+        break;
       case 'A/P':
         var resultado=factores.AP(N,i);
-        document.getElementById('resultado').innerHTML="<span style='color: green;'>"+factores.AP(N,i)+"</span>";
         break;
+      case 'P/G':
+        var resultado=factores.PG(N,i);
+        break;
+      case 'A/G':
+        var resultado=factores.AG(N,i);
+        break;
+      
     }
+    document.getElementById('resultado').innerHTML="<span style='color: green;'>Resultado factor ("+factor+"): <br>"+resultado+"</br></span>";
   }
 
 }
