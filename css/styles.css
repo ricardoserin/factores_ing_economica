@@ -1,17 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&display=swap");
 body {
   margin: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 75px auto;
   grid-template-rows: 75px auto;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: #fafafa;
+  font-family: Cabin; }
 
 .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   height: 75px;
   width: 100%;
   background: #DEE3E4; }
 
 .header__escuela {
   font-size: 10px; }
+
+.header__universidad-logo {
+  height: 70px; }
+
+.header__curso {
+  font-size: 10px;
+  float: rigth; }
+
+.information {
+  margin: 0 32px; }
+  .information__devs-container {
+    padding-left: 10px; }
+  .information__devs-title {
+    font-size: 20px; }
+  .information__dev {
+    margin: 4px 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .information__dev-photo {
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 8px; }
+
+section {
+  min-height: calc(100vh - 75px);
+  height: calc(100vh - 75px);
+  max-height: calc(100vh - 75px);
+  overflow-y: scroll;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% auto;
+  grid-template-columns: 30% auto; }
 
 /*# sourceMappingURL=styles.css.map */
