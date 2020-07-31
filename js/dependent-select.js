@@ -2,8 +2,8 @@ var nFactorial_1=new Array("Cantidad compuesta (F/P)","Valor presente (P/F)");
 var nFactorial_1_value=new Array("F/P","P/F");
 var nFactorial_2=new Array("Cantidad compuesta (F/A)","Fondo de amortización (A/F)","Valor presente (P/A)","Recuperación de capital (A/P)");
 var nFactorial_2_value=new Array("F/A","A/F", "P/A", "A/P");
-var nFactorial_3=new Array("Valor presente del gradiente lineal (P/G)","Factor de conversión de pagos iguales (A/G)");
-var nFactorial_3_value=new Array("P/G","A/G");
+var nFactorial_3=new Array("Valor presente del gradiente lineal (P/G)","Factor de conversión de pagos iguales (A/G)", "Valor presente del gradiente geométrico P/A1");
+var nFactorial_3_value=new Array("P/G","A/G", "P/A1");
 var todasNFactoriales = [
   [],
   nFactorial_1,
@@ -46,4 +46,10 @@ function cambia_notacionFactorial(){
    } 
    //marco como seleccionada la opción primera de provincia 
    document.f1.factor.options[0].selected = true 
+}
+
+function elige_grad_geometrico(){
+   if(document.f1.factor[document.f1.factor.selectedIndex].value==="P/A1"){
+      document.getElementById('datos').innerHTML+="<label for='g'>Valor g<input id='g' name='g' type='number'></label>";
+   }
 }

@@ -20,6 +20,9 @@ body{
   }
   &__escuela{
     font-size:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__universidad{
     &-logo{
@@ -31,6 +34,9 @@ body{
   &__curso{
     font-size:10px;
     float: rigth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -58,6 +64,23 @@ body{
   }
 }
 
+.form{
+  &-container{
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+  }
+  &__formula{
+    margin: 36px 0;
+  }
+  &__datos{
+    margin: 36px 0;
+
+  }
+  width: 60%;
+  
+}
+
 section{
   min-height: calc(100vh - 75px);
   height: calc(100vh - 75px);
@@ -67,23 +90,35 @@ section{
   grid-template-columns: 30% auto;
 }
 
-select{
-
-}
-
 label{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 16px 0;
 }
 
 input{
-  height: 15px;
+  height: 16px;
   border-radius: 8px;
   text-align: right;
-  padding: 3px;
-  &.button{
-    height: 32px;
+  padding: 2px 4px;
+  border: 1px solid;
+}
+
+.button{
+  height: 32px;
+  background: #cccccc;
+  font-weight: bold;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background: #f0f0f0;
+  }
+
+  &-container{
+    display: flex;
+    flex-direction: row-reverse;;
   }
 }
 
@@ -94,3 +129,10 @@ select{
   min-width: 300px;
 }
 
+.resultado{
+  width: 100%;
+  &-container{
+    width: 100%;
+    display: flex;
+  }
+}

@@ -76,7 +76,7 @@ function program(){
         break;
       
     }
-    document.getElementById('resultado').innerHTML="<span style='color: green;'>Resultado factor ("+factor+"): <br>"+resultado+"</br></span>";
+    document.getElementById('resultado').innerHTML="<span class='resultado' style='color: green;'>Resultado factor ("+factor+"): "+resultado+"</span>";
   }
 
 }

@@ -24,14 +24,32 @@ body {
   background: #DEE3E4; }
 
 .header__escuela {
-  font-size: 10px; }
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .header__universidad-logo {
   height: 70px; }
 
 .header__curso {
   font-size: 10px;
-  float: rigth; }
+  float: rigth;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .information {
   margin: 0 32px; }
@@ -56,6 +74,21 @@ body {
       border-radius: 50%;
       margin: 0 8px; }
 
+.form {
+  width: 60%; }
+  .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-left: 1px solid #ccc; }
+  .form__formula {
+    margin: 36px 0; }
+  .form__datos {
+    margin: 36px 0; }
+
 section {
   min-height: calc(100vh - 75px);
   height: calc(100vh - 75px);
@@ -76,20 +109,46 @@ label {
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 16px 0; }
 
 input {
-  height: 15px;
+  height: 16px;
   border-radius: 8px;
   text-align: right;
-  padding: 3px; }
-  input.button {
-    height: 32px; }
+  padding: 2px 4px;
+  border: 1px solid; }
+
+.button {
+  height: 32px;
+  background: #cccccc;
+  font-weight: bold;
+  width: 100px;
+  text-align: center;
+  cursor: pointer; }
+  .button:hover {
+    background: #f0f0f0; }
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
 
 select {
   height: 30px;
   border-radius: 8px;
   padding: 3px;
   min-width: 300px; }
+
+.resultado {
+  width: 100%; }
+  .resultado-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 /*# sourceMappingURL=styles.css.map */
