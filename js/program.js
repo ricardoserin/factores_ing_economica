@@ -59,6 +59,11 @@ function program(){
     document.getElementById("periodos").innerText = "0";
     document.getElementById("periodos").focus();
   }
+  else if (factor==='P/A1' && isNaN(parseFloat(document.getElementById('g').value))) {
+    document.getElementById('resultado').innerHTML="<span style='color: red;'>Por favor, escriba el valor g.</span>";
+    document.getElementById("g").innerText = "0";
+    document.getElementById("g").focus();
+  }
   else{
     switch(factor){
       case 'F/P':

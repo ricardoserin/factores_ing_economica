@@ -188,7 +188,9 @@ select {
       max-width: 200px; } }
 
 .resultado {
-  width: 100%; }
+  width: 100%;
+  font-weight: bold;
+  font-size: large; }
   .resultado-container {
     width: 100%;
     display: -webkit-box;

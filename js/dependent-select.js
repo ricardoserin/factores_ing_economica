@@ -24,6 +24,7 @@ function cambia_notacionFactorial(){
    flujo = document.f1.tipo_flujo[document.f1.tipo_flujo.selectedIndex].value 
    //miro a ver si el pais está definido 
    if (flujo != 0) { 
+      document.getElementById('factor-container').className='';
       //si estaba definido, entonces coloco las opciones de la provincia correspondiente. 
       //selecciono el array de provincia adecuado 
       mis_nFactoriales=todasNFactoriales[flujo]
