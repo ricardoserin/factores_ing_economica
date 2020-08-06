@@ -42,7 +42,7 @@ function cambia_notacionFactorial(){
       document.f1.factor.length = 1 
       //coloco un guión en la única opción que he dejado 
       document.f1.factor.options[0].value = "-" 
-      document.f1.factor.options[0].text = "-" 
+      document.f1.factor.options[0].text = "Debe seleccionar primero un tipo de flujo" 
    } 
    //marco como seleccionada la opción primera de provincia 
    document.f1.factor.options[0].selected = true 
@@ -50,6 +50,14 @@ function cambia_notacionFactorial(){
 
 function elige_grad_geometrico(){
    if(document.f1.factor[document.f1.factor.selectedIndex].value==="P/A1"){
-      document.getElementById('datos').innerHTML+="<label for='g'>Valor g<input id='g' name='g' type='number'></label>";
+      document.getElementById('datos').className="form__datos";
+      document.getElementById('valor_g').className="";
+   }
+   else{
+      document.getElementById('datos').className="form__datos";
+      document.getElementById('valor_g').className="hidden";
+      // document.getElementById('datos').innerHTML=
+      //    "<label for='tasa'>Tasa de interés (en decimales)<input id='tasa' name='tasa' type='text'></label>"
+      //    +"<label for='periodos'>Número de periodos<input id='periodos' name='periodos' type='number'></label>";
    }
 }

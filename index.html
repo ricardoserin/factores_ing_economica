@@ -74,7 +74,7 @@
           <h3>Seleccione la fórmula</h3>
           <label for="tipo_flujo">
             Tipo de flujo
-            <select name="tipo_flujo" id="tipo_flujo" onchange="cambia_notacionFactorial()">
+            <select name="tipo_flujo" id="tipo_flujo" onchange="cambia_notacionFactorial(); elige_grad_geometrico();">
               <option value="0">Seleccione el tipo de flujo</option>
               <option value="1">Sencillo</option>
               <option value="2">Series de pagos iguales</option>
@@ -84,18 +84,21 @@
           <label for="factor">
             Factor
             <select name="factor" id="factor" onchange="elige_grad_geometrico()">
+              <option value="">Debe seleccionar primero un tipo de flujo</option>
             </select>
           </label>
           
         </div>
-        <div class="form__datos" id="datos">
+        <div class="form__datos hidden" id="datos">
           <h3>Ingrese los siguientes datos</h3>
-          <label for="tasa">Tasa de interés (en decimales)<input id="tasa" name="tasa" type="text"></label>
-          <label for="periodos">Número de periodos<input id="periodos" name="periodos" type="number"></label>
+          <label for="tasa">Tasa de interés (en decimales):<input id="tasa" name="tasa" type="text"></label>
+          <label for="periodos">Número de periodos:<input id="periodos" name="periodos" type="number"></label>
+          <label id="valor_g" for="g">Valor g:<input id="g" name="g" type="text"></label>
+          <div class="button-container">
+            <input class="button" type="button" value="Calcular" onclick="program(); return false;">
+          </div>
         </div>
-        <div class="button-container">
-          <input class="button" type="button" value="Calcular" onclick="program(); return false;">
-        </div>
+        
         <div id="resultado" class="resultado-container"></div>
       </form>
     </div>

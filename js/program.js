@@ -31,11 +31,22 @@ function program(){
     AG: function conversion_pagos_AG (N,i){
       var F=((Math.pow(1+i,N)-i*N-1)/(i*(Math.pow(1+i,N)-1)));
       return F;
+    },
+    PA1: function valor_presente_gradiente_geométrico (N,i,g){
+      var F;
+      if(i===g){
+        F=(N/(1+i));
+      }
+      else{
+        F=((1-(Math.pow((1+g)/(1+i),N)))/(i-g))
+      }
+      return F;
     }
   }
   var factor = document.getElementById("factor").value;
   var N = parseFloat(document.getElementById('periodos').value);
   var i = parseFloat(document.getElementById('tasa').value);
+  var g = parseFloat(document.getElementById('g').value);
 
   //evaluamos si se ingresaron los datos
   if (isNaN(parseFloat(document.getElementById('tasa').value))) {
@@ -74,7 +85,9 @@ function program(){
       case 'A/G':
         var resultado=factores.AG(N,i);
         break;
-      
+      case 'P/A1':
+        var resultado=factores.PA1(N,i,g);
+        break;
     }
     document.getElementById('resultado').innerHTML="<span class='resultado' style='color: green;'>Resultado factor ("+factor+"): "+resultado+"</span>";
   }
